@@ -12,28 +12,6 @@
         <div class="col-4">
           <app-column-header [columnName]="'Backlog'"></app-column-header>
           <app-column [columnName]="'Backlog'" [tickets]="listOfBacklogTickets"></app-column>
-          <!--            <div class="lfio-card lfio-card-10px-border-radius align-content-center lfio-ticket-column"-->
-          <!--                 cdkDropList-->
-          <!--                 #backLogList="cdkDropList"-->
-          <!--                 [cdkDropListData]="listOfBacklogTickets"-->
-          <!--                 [cdkDropListConnectedTo]="[listOfInProgressTickets]"-->
-          <!--                 (cdkDropListDropped)="onDrop($event)"-->
-          <!--                 [ngClass]="{'bg-secondary': true}">-->
-
-          <!--              <app-ticket-card *ngFor="let ticket of listOfBacklogTickets; let i = index" [readOnlyMode]="true" [ticket]="ticket"-->
-          <!--                               [cardIndex]="i" cdkDrag></app-ticket-card>-->
-
-          <!--              <div [hidden]="!isCreateMode()">-->
-          <!--                <form #ticketForm='ngForm'>-->
-          <!--                  <app-ticket-card [readOnlyMode]="false" (onCreation)="onCreation()"></app-ticket-card>-->
-          <!--                </form>-->
-          <!--              </div>-->
-
-          <!--              <div class="btn btn-secondary lfio-ticket-add-button align-content-center" (click)="createTicket()">+ Add Card-->
-          <!--              </div>-->
-          <!--            </div>-->
-
-
         </div>
         <div class="col-4">
           <app-column-header [columnName]="'In Progress'"></app-column-header>
