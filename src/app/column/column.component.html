@@ -1,0 +1,16 @@
+<div class="lfio-card lfio-card-10px-border-radius align-content-center lfio-ticket-column"
+     [ngClass]="{'bg-secondary': isBacklog(), 'bg-primary': isInProgress(), 'bg-success': isCompleted()}">
+
+  <app-ticket-card *ngFor="let ticket of tickets; let i = index" [readOnlyMode]="true" [ticket]="ticket"
+                   [cardIndex]="i" cdkDrag></app-ticket-card>
+
+  <div [hidden]="!isCreateMode()">
+    <form #ticketForm='ngForm'>
+      <app-ticket-card [readOnlyMode]="false" (onCreation)="onCreation()"></app-ticket-card>
+    </form>
+  </div>
+
+  <div class="btn btn-secondary lfio-ticket-add-button align-content-center"
+       [hidden]="!isBacklog() || (isBacklog() && isCreateMode())" (click)="createTicket()">+ Add Card
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.lfio-ticket-column {
+  height: 50vh;
+  margin-top: 30px;
+  overflow-y: scroll;
+}
+
+.lfio-ticket-add-button{
+  position:absolute;
+  width:300px;
+  height:50px;
+  margin-left:-150px;
+  bottom:0px;
+  left:50%;
+}

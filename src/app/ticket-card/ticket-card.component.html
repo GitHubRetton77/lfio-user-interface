@@ -1,0 +1,29 @@
+<div class="card m-2" *ngIf="readOnlyMode; else create" [class.ticket-card-selected]="isSelected()">
+  <div class="card-body" [id]="cardId"
+       (click)="highlightCardBorderIfSelected($event)">
+    <div class="row">
+      <div class="col-2 float-left" (click)="moveStatusToTheLeft()"><i class="fa fa-chevron-circle-left"
+                                                                       [hidden]="isBacklog()"></i></div>
+      <div class="col-8"><span>{{ticket.description}}</span></div>
+      <div class="col-2 float-right" (click)="moveStatusToTheRight()"><i class="fa fa-chevron-circle-right"
+                                                                         [hidden]="isComplete()"></i></div>
+    </div>
+    <div>
+      <span class="float-left">{{ticket.creationDate}}</span>
+      <span class="float-right">{{ticket.user}}</span>
+    </div>
+  </div>
+</div>
+<ng-template #create>
+  <div class="card m-2 ticket-card-selected">
+    <div class="card-body">
+      <div class="row m-1">
+        <div class="col-12"><textarea #descriptionInput style="border: none; resize: none; width: 100%"></textarea></div>
+      </div>
+      <div>
+        <span class="float-left">Creating...</span>
+        <span class="float-right"><button type="button" class="btn btn-primary" (click)="createTicket()">Done</button></span>
+      </div>
+    </div>
+  </div>
+</ng-template>

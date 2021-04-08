@@ -1,0 +1,10 @@
+.lfio-board-header{
+  height: 140px;
+  border-bottom: 3px solid lightgray;
+  vertical-align: bottom;
+}
+
+.lfio-board-header-text{
+  position: absolute;
+  bottom: 0;
+}

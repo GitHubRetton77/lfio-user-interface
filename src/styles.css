@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+.lfio-card {
+  padding: 2px;
+}
+
+.lfio-card-10px-border-radius{
+  border-radius: 10px;
+}
